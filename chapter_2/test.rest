@@ -1,0 +1,11 @@
+
+GET http://localhost:8383/
+
+###
+
+POST http://localhost:8383/login
+Content-Type: application/json
+
+{
+    "name" : "jimmy"
+}

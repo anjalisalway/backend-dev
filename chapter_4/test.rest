@@ -1,0 +1,48 @@
+###
+GET http://localhost:8383
+
+
+###
+POST http://localhost:8383/auth/register
+Content-Type: application/json
+
+{
+    "username" : "anjali_is_locked_in" , 
+    "password" : "lessgoo"
+}
+###
+POST http://localhost:8383/auth/login
+Content-Type: application/json
+
+{
+    "username" : "anjali_is_locked_in" , 
+    "password" : "lessgoo"
+}
+
+###
+GET http://localhost:8383/todos 
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzg3MzM2NDQ5LCJleHAiOjE3ODc0MjI4NDl9.Y8GeH4X60vCt7BKpIxBdbaWGbaCuo3VMrPJCFEI6IVU
+###
+POST http://localhost:8383/todos 
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzg3MzM2NDQ5LCJleHAiOjE3ODc0MjI4NDl9.Y8GeH4X60vCt7BKpIxBdbaWGbaCuo3VMrPJCFEI6IVU
+Content-Type: application/json
+
+{
+    "task" : "walk jimmy" 
+}
+
+###
+
+PUT http://localhost:8383/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzg3MzM2NDQ5LCJleHAiOjE3ODc0MjI4NDl9.Y8GeH4X60vCt7BKpIxBdbaWGbaCuo3VMrPJCFEI6IVU
+Content-Type: application/json
+
+{
+    "completed" : 1
+}
+
+###
+
+DELETE http://localhost:8383/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzg3MzM2NDQ5LCJleHAiOjE3ODc0MjI4NDl9.Y8GeH4X60vCt7BKpIxBdbaWGbaCuo3VMrPJCFEI6IVU
+

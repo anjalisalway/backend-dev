@@ -1,0 +1,30 @@
+services:
+  app:
+    build: .
+    container_name: todo-app
+    environment:
+      DATABASE_URL: postgresql://postgres:redacted@db:5432/todoapp
+      JWT_SECRET: your_jwt_secret_here
+      NODE_ENV: development
+      PORT: 8383
+    ports:
+      - "8383:8383"
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+
+  db:
+    image: postgres:13-alpine
+    container_name: postgres-database
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: redacted
+      POSTGRES_DB: todoapp
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
