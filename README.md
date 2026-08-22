@@ -1,8 +1,6 @@
 # backend-dev
 
-My notes-and-code repo for learning backend development with **Node.js + Express**. Each `chapter_X` folder is a self-contained project with its own `package.json` — I build the *same* todo app three times, adding a real backend concept each time.
-
-Each chapter has its own detailed README. This one is the map — the big picture of how the projects connect and how a backend app is generally structured.
+My notes-and-code repo for learning backend development with **Node.js + Express**. Each `chapter_X` folder is a self-contained project with its own `package.json` 
 
 ---
 
